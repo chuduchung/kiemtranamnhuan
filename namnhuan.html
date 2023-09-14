@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label><input type="text" placeholder="Nhập năm" id="year"></label>
+    <button onclick="Kiemtra()">Kiểm tra</button>
+    <p id="hienthi"></p>
+
+
+<script>
+    function Kiemtra() {
+        let year = document.getElementById("year").value;
+            if (year % 4 == 0) {
+                if (year % 100 == 0) {
+                    if (year % 400 == 0) {
+                        document.getElementById("hienthi").innerHTML = "năm" + year + "là năm nhuận";
+                    }else {
+                        document.getElementById("hienthi").innerHTML = "năm" + year + " không phải là năm nhuận";
+                    }
+                }else {
+                    document.getElementById("hienthi").innerHTML ="năm" + year + "là năm nhuận";
+                }
+            }else {
+                document.getElementById("hienthi").innerHTML =" năm " + year + "không phải là năm nhuận"
+            }
+    }
+</script>
+
+</body>
+</html>
